@@ -20,12 +20,12 @@ export const getAllDishes = async (req: Request, res: Response) => {
 //fetch dishes by name
 export const getDishByName = async (req: Request, res: Response) => {
   const name = req.params.name.toLowerCase();
-  const {stateName, location} = req.body.geoData;
+  const { stateName, location } = req.body.geoData;
 
   const dish = dishes.find((d) => d.name.toLowerCase() === name);
   if (dish) {
-    const statesData =await getStatesData(stateName,location);
-    const result ={dish, statesData};    
+    const statesData = await getStatesData(stateName, location);
+    const result = { dish, statesData };
     res.json(result);
   } else {
     res.status(404).json({ message: "Dish not found" });
