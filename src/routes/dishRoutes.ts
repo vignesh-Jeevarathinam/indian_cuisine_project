@@ -8,7 +8,7 @@ import {
 const router = Router();
 
 router.get("/dishes", getAllDishes);
-router.get("/dishes/:name", getDishByName);
+router.post("/dishes/:name", getDishByName);
 router.get("/dishByIngredient", getDishesByIngredients);
 
 export default router;

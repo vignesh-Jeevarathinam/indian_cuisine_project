@@ -2,7 +2,7 @@ import express from "express";
 import dishRoutes from "@routes/dishRoutes";
 import cors from "cors";
 const app = express();
-const port = process.env.PORT || 5500;
+const port = process.env.PORT || 5600;
 app.use(cors());
 app.use(express.json());
 app.use("/api", dishRoutes);
